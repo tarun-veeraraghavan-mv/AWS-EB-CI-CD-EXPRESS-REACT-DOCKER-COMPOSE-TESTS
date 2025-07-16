@@ -60,3 +60,4 @@ jobs:
           version_label: ${{ github.sha }}
           region: us-east-2
           deployment_package: deploy.zip
+          bucket_name: client-build-folder
