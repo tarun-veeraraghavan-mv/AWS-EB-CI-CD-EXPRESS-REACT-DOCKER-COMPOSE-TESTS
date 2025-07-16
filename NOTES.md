@@ -49,5 +49,4 @@ Congratulations! Your Docker application is now running on your own dedicated en
 
 ---
 
-<!-- test-express -->
-<!-- Test-express-env -->
+CREATING RDS POSTGRES
