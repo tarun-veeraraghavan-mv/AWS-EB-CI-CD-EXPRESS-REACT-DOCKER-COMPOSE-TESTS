@@ -2,13 +2,11 @@ name: Deploy Express App to EB
 
 on:
   push:
-    branches: [main]
+    paths:
+      - "express/**"
   pull_request:
-    branches: [main]
-
-env:
-  AWS_ACCESS_KEY:
-  AWS_SECRET_KEY:
+    paths:
+      - "express/**"
 
 jobs:
   deploy:
