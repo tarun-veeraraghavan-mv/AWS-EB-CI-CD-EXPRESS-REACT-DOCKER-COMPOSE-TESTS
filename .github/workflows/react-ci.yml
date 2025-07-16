@@ -40,13 +40,22 @@ jobs:
           echo "Checking package.json:"
           cat package.json
 
+      - name: Check files before zipping
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Files:"
+          ls -la
+          echo "Checking dist:"
+          ls -la dist
+
       - name: Prepare deployment package
         run: |
-          # Create a deploy folder and copy build files there
           mkdir deploy
           cp -r dist/* deploy/
           cd deploy
-          zip -r ../deploy.zip ./*
+          zip -r deploy.zip ./*
+          mv deploy.zip ../deploy.zip
           cd ..
           ls -la deploy.zip
 
@@ -60,4 +69,4 @@ jobs:
           version_label: ${{ github.sha }}
           region: us-east-2
           deployment_package: deploy.zip
-          bucket_name: client-build-folder
+          existing_bucket_name: client-build-folder
