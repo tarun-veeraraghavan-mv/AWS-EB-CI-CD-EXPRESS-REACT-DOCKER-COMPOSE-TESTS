@@ -10,6 +10,10 @@ app.get("/", (req, res) => {
   res.send("Express with AWS working!!!!!!");
 });
 
+app.get("/secret", (req, res) => {
+  res.send("SECRET! AWS WORKING!");
+});
+
 app.listen(3000, () => {
   console.log("Listening on port 3000");
 });
