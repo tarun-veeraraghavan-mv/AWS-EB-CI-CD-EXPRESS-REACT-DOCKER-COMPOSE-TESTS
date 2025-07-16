@@ -14,7 +14,7 @@ app.get("/secret", (req, res) => {
   res.send("SECRET! AWS WORKING!!!!!!!!");
 });
 
-app.get("/aws", (req, res) => {
+app.get("/check", (req, res) => {
   res.send("Backend with AWS is working well");
 });
 
