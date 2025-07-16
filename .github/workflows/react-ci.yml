@@ -51,8 +51,9 @@ jobs:
 
       - name: Prepare deployment package
         run: |
+          cd react
+          zip -r ../deploy.zip . -x 'node_modules/*' '.git/*'
           cd ..
-          zip -r deploy.zip react -x 'react/node_modules/*' 'react/.git*'
           ls -la deploy.zip
 
       - name: Deploy to EB
