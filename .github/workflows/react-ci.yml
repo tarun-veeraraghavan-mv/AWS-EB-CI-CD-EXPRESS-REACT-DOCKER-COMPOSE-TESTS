@@ -1,4 +1,4 @@
-name: Deploy Express App to EB
+name: Deploy React App to EB
 
 on:
   push:
