@@ -28,6 +28,15 @@ jobs:
           # python -m pytest tests/
           echo "Skipping tests for now"
 
+      - name: Check files before zipping
+        run: |
+          echo "Files in express directory:"
+          ls -la
+          echo "Checking for Dockerfile:"
+          cat Dockerfile || echo "No Dockerfile found"
+          echo "Checking package.json:"
+          cat package.json
+
       - name: Generate deployment package
         run: |
           zip -r ../deploy.zip . -x '*.git*' 'node_modules'

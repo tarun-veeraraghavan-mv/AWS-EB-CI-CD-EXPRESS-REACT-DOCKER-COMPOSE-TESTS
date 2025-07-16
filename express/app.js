@@ -14,6 +14,6 @@ app.get("/secret", (req, res) => {
   res.send("SECRET! AWS WORKING!!!!!!!!");
 });
 
-app.listen(3000, () => {
+app.listen(3000, "0.0.0.0", () => {
   console.log("Listening on port 3000");
 });
