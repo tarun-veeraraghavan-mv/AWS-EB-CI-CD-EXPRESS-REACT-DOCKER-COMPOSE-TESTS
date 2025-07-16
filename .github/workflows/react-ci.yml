@@ -68,5 +68,5 @@ jobs:
           environment_name: Test-react-env
           version_label: ${{ github.sha }}
           region: us-east-2
-          deployment_package: deploy.zip
+          deployment_package: react/deploy.zip
           existing_bucket_name: client-build-folder
